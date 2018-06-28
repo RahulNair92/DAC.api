@@ -2,8 +2,13 @@ package org.sayem.api;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.StringReader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
+
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 
 /**
  * Created by syed.sayem on 6/21/15.
@@ -77,5 +82,14 @@ public class PropertiesUtil {
 
     public String data(Repository value) {
         return getProperties(value.getValue());
+    }
+    
+    public static JsonObject jsonFromString(String jsonObjectStr) {
+
+        JsonReader jsonReader = Json.createReader(new StringReader(jsonObjectStr));
+        JsonObject object = jsonReader.readObject();
+        jsonReader.close();
+
+        return object;
     }
 }

@@ -39,7 +39,7 @@ public class GetAdapter extends AbstractAdapter implements RestAdapter {
                 .body(getObject().toString())
                 .expect()
                 .contentType(ContentType.JSON)
-                .statusCode(200)
+                .statusCode(getExpectedStatus())
                 .log().all()
 
                 .when()
@@ -60,7 +60,7 @@ public class GetAdapter extends AbstractAdapter implements RestAdapter {
 
                 .expect()
                 .contentType(ContentType.JSON)
-                .statusCode(200)
+                .statusCode(getExpectedStatus())
                 .log().all()
 
                 .when()

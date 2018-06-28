@@ -9,7 +9,9 @@ public enum Repository {
     USER_NAME("username"),
     PASSWORD("password"),
     METHOD("method"),
-    ENDPOINT("endpoint");
+    ENDPOINT("endpoint"),
+	EXPECTED_STATUS("expectedStatus"),
+	REQUEST("request");
 
     public static final String PROPERTIES = "src/test/resources/api.properties";
     private String value;

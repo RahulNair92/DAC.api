@@ -13,12 +13,14 @@ public class AbstractAdapter {
     private String endPoint;
     private String method;
     private ContentType contentType;
+    private int expectedStatus;
 
     protected AbstractAdapter(AbstractBuilder<?, ?> builder) {
         this.object = builder.object;
         this.endPoint = builder.endPoint;
         this.method = builder.method;
         this.contentType = builder.contentType;
+        this.expectedStatus =builder.expectedStatus;
     }
 
     public static AbstractBuilder<?, ?> builder() {
@@ -41,6 +43,10 @@ public class AbstractAdapter {
     public ContentType getContentType() {
         return contentType;
     }
+    
+    public int getExpectedStatus() {
+        return expectedStatus;
+    }
 
     private void prettyPrint() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -57,6 +63,7 @@ public class AbstractAdapter {
                 .append("endPoint", endPoint)
                 .append("method", method)
                 .append("contentType", contentType)
+                .append("expectedStatus", expectedStatus)
                 .toString();
     }
 
@@ -65,6 +72,7 @@ public class AbstractAdapter {
         private String endPoint;
         private String method;
         private ContentType contentType;
+        private int expectedStatus;
 
         @SuppressWarnings("unchecked")
         public B setRequestObject(Object object) {
@@ -89,6 +97,13 @@ public class AbstractAdapter {
             this.contentType = contentType;
             return (B) this;
         }
+        
+        @SuppressWarnings("unchecked")
+        public B setExpectedStatust(int expectedStatus) {
+            this.expectedStatus = expectedStatus;
+            return (B) this;
+        }
+
 
         public abstract S build();
     }

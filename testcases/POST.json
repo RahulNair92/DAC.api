@@ -1,0 +1,26 @@
+{
+"Fetch List of Users" : {
+						"testcaseName" : "Fetch List of Users",
+						"expectedResult" : "All Users are listed",
+						"endpoint" : "https://jsonplaceholder.typicode.com",
+						"method" :  "/posts",
+						"request" : {"title": "foo", "body": "bar","userID": "1"},
+						"expectedStatus" : "201",
+						"expected_body" : "{}"
+						},
+						
+"test2"			:  {	"testcaseName" : "test2",
+						"expectedResult" : "Mohandas Loop",
+						"endpoint" : "https://dac-loop-func-dev.azurewebsites.net/api",
+						"method" :  "/accountnotification?code=CrIO5841G9164STQTaRGjOFObSLFHS0pvVBVdrJdqEPTozDCptYr1A==",
+						"request" :{"AccountID":"0E984725-C51C-4BF4-9960-E1C80E27AAB0","NotificationID":"28CBB373-6608-4E7F-AA67-36943ADE5504","AllowUserOptOut":"1","ModifiedBy":"MAKMOHAN"} ,
+						"expectedStatus" : "200",
+						"expected_body" : "{}"
+						}
+						
+						
+						
+
+
+
+}

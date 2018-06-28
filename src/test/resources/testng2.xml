@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite">
+    <test name="GET request" preserve-order="true">
+        <classes>
+            <class name="org.sayem.api.json.placeholder.controller">
+            </class>
+        </classes>
+    </test>
+    
+    <test name="POST request" preserve-order="true">
+        <classes>
+            <class name="org.sayem.api.json.placeholder.controller">
+            </class>
+        </classes>
+    </test>
+    <test name="DELETE request" preserve-order="true">
+        <classes>
+            <class name="org.sayem.api.json.placeholder.controller">
+            </class>
+        </classes>
+    </test>
+    <test name="PUT request" preserve-order="true">
+        <classes>
+            <class name="org.sayem.api.json.placeholder.controller">
+            </class>
+        </classes>
+    </test>
+    
+
+   
+</suite>

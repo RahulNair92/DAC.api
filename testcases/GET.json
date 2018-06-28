@@ -1,0 +1,17 @@
+{
+"Fetch List of Users" : {"testcaseName" : "Fetch List of Users",
+						"expectedResult" : "All Users are listed",
+						"endpoint" : "https://jsonplaceholder.typicode.com",
+						"method" :  "/posts",
+						"request" : {},
+						"expectedStatus" : "200",
+						"expected_body" : "{}"
+						}
+
+						
+						
+						
+
+
+
+}

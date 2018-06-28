@@ -1,4 +1,4 @@
-package org.sayem.api.json.placeholder;
+package org.sayem.api.petstore;
 
 import com.jayway.restassured.path.json.JsonPath;
 import org.sayem.api.*;

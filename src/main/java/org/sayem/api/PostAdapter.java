@@ -9,6 +9,7 @@ import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.internal.mapper.ObjectMapperType;
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
+import com.jayway.restassured.response.ResponseBody;
 
 import static com.jayway.restassured.RestAssured.given;
 import static com.jayway.restassured.config.EncoderConfig.encoderConfig;
@@ -38,13 +39,15 @@ public class PostAdapter extends AbstractAdapter implements RestAdapter {
                 .body(getObject().toString())
                 .expect()
                 .contentType(ContentType.JSON)
-                .statusCode(200)
+                .statusCode(getExpectedStatus())
                 .log().all()
 
                 .when()
                 .post(getMethod());
-
+       
+      
         String json = response.asString();
+        System.out.println("Output is :" + json);
         return new JsonPath(json);
     }
 
@@ -59,7 +62,7 @@ public class PostAdapter extends AbstractAdapter implements RestAdapter {
 
                 .expect()
                 .contentType(ContentType.JSON)
-                .statusCode(200)
+                .statusCode(getExpectedStatus())
                 .log().all()
 
                 .when()

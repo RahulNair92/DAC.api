@@ -1,0 +1,19 @@
+{
+	 "1" : {
+						"testcaseName" : "Delete Test",
+						"expectedResult" : "entry got deleted",
+						"endpoint" : "http://dac-loop-func-dev.azurewebsites.net/api/",
+						"method" :  "/AttributeType/B69EDD93-E286-4FC1-A9A5-1A5A590C1CF6?code=BUCyoAsNrQ127E63UZ4TTkJ33cyWOwdDXQqsNCeEZJHLKzCbGt6vUg==",
+						"request" : {"AccountID": "B69EDD93-E286-4FC1-A9A5-1A5A590C1CF6", "AttributeTypeName": "UPDATED Test Attribute", "Allowmultipleselection": "true", "ModifiedBy": "UPDATED Modified Attribute1"},
+						"expectedStatus" : "200",
+						"expected_body" : "{}"
+						}
+						
+						
+						
+
+
+
+}
+
+

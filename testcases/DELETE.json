@@ -1,0 +1,17 @@
+{
+ "1" : {
+						"testcaseName" : "Delete Test",
+						"expectedResult" : "entry got deleted",
+						"endpoint" : "https://jsonplaceholder.typicode.com",
+						"method" :  "/posts/1",
+						"request" : {},
+						"expectedStatus" : "200",
+						"expected_body" : "{}"
+						}
+						
+						
+						
+
+
+
+}
